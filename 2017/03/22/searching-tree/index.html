@@ -84,25 +84,16 @@
 
 
 
-<meta name="description" content="索引索引更有效
-索引快的数量通常比数据块的数量要少；
-由于键被排序，可以使用二分查找来查找k，O（logn）；
-索引文件可能足够小，以至于可以永久的存在在组村缓存区中，这样查找键值k只需要做主存访问，而不需做I/O操作。">
+<meta name="description" content="Tree 搜索　123456789##### binary search tree    private TreeNode binaryTreeSearch(TreeNode root,int val)&amp;#123;        if(root == null) return null;        if(root.val == val) return root;        else if(">
 <meta property="og:type" content="article">
-<meta property="og:title" content="数据库-索引">
-<meta property="og:url" content="http://yoursite.com/2017/03/21/database-index/index.html">
+<meta property="og:title" content="searching_tree">
+<meta property="og:url" content="http://yoursite.com/2017/03/22/searching-tree/index.html">
 <meta property="og:site_name" content="qilianghong">
-<meta property="og:description" content="索引索引更有效
-索引快的数量通常比数据块的数量要少；
-由于键被排序，可以使用二分查找来查找k，O（logn）；
-索引文件可能足够小，以至于可以永久的存在在组村缓存区中，这样查找键值k只需要做主存访问，而不需做I/O操作。">
-<meta property="og:updated_time" content="2017-03-20T16:32:23.684Z">
+<meta property="og:description" content="Tree 搜索　123456789##### binary search tree    private TreeNode binaryTreeSearch(TreeNode root,int val)&amp;#123;        if(root == null) return null;        if(root.val == val) return root;        else if(">
+<meta property="og:updated_time" content="2017-03-22T20:51:25.703Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="数据库-索引">
-<meta name="twitter:description" content="索引索引更有效
-索引快的数量通常比数据块的数量要少；
-由于键被排序，可以使用二分查找来查找k，O（logn）；
-索引文件可能足够小，以至于可以永久的存在在组村缓存区中，这样查找键值k只需要做主存访问，而不需做I/O操作。">
+<meta name="twitter:title" content="searching_tree">
+<meta name="twitter:description" content="Tree 搜索　123456789##### binary search tree    private TreeNode binaryTreeSearch(TreeNode root,int val)&amp;#123;        if(root == null) return null;        if(root.val == val) return root;        else if(">
 
 
 
@@ -130,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/03/21/database-index/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/03/22/searching-tree/"/>
 
 
 
 
 
-  <title> 数据库-索引 | qilianghong </title>
+  <title> searching_tree | qilianghong </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -249,7 +240,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/21/database-index/">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/22/searching-tree/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="andy">
@@ -273,7 +264,7 @@
             
             
               
-                数据库-索引
+                searching_tree
               
             
           </h1>
@@ -288,8 +279,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-21T00:08:31+08:00">
-                2017-03-21
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-22T01:03:07+08:00">
+                2017-03-22
               </time>
             
 
@@ -324,11 +315,7 @@
       
 
       
-        <h4 id="索引"><a href="#索引" class="headerlink" title="索引"></a>索引</h4><h6 id="索引更有效"><a href="#索引更有效" class="headerlink" title="索引更有效"></a>索引更有效</h6><ol>
-<li>索引快的数量通常比数据块的数量要少；</li>
-<li>由于键被排序，可以使用二分查找来查找k，O（logn）；</li>
-<li>索引文件可能足够小，以至于可以永久的存在在组村缓存区中，这样查找键值k只需要做主存访问，而不需做I/O操作。</li>
-</ol>
+        <h3 id="Tree-搜索"><a href="#Tree-搜索" class="headerlink" title="Tree 搜索　"></a>Tree 搜索　</h3><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">##### binary search tree  </div><div class="line">  private TreeNode binaryTreeSearch(TreeNode root,int val)&#123;</div><div class="line">        if(root == null) return null;</div><div class="line">        if(root.val == val) return root;</div><div class="line">        else if(val &gt; root.val) return binaryTreeSearch(root.right,val);</div><div class="line">        else return binaryTreeSearch(root.left,val);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">#### avl search tree</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -355,8 +342,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/03/20/spring-transaction-management/" rel="next" title="spring_transaction_management">
-                <i class="fa fa-chevron-left"></i> spring_transaction_management
+              <a href="/2017/03/22/datastructure-java-tree/" rel="next" title="数据结构_java_tree">
+                <i class="fa fa-chevron-left"></i> 数据结构_java_tree
               </a>
             
           </div>
@@ -365,8 +352,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/03/22/datastructure-java-tree/" rel="prev" title="数据结构_java_tree">
-                数据结构_java_tree <i class="fa fa-chevron-right"></i>
+              <a href="/2017/03/23/computer-network/" rel="prev" title="">
+                 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -483,7 +470,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#索引"><span class="nav-number">1.</span> <span class="nav-text">索引</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#索引更有效"><span class="nav-number">1.0.1.</span> <span class="nav-text">索引更有效</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Tree-搜索"><span class="nav-number">1.</span> <span class="nav-text">Tree 搜索　</span></a></li></ol></div>
             
 
           </div>
