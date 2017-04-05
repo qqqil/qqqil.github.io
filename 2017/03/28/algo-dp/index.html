@@ -84,16 +84,37 @@
 
 
 
-<meta name="description" content="RodCutting Problem:12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849/** * Created by andy on 17-3-28. */public class RodCutting &amp;#123;    private int rodCuttin">
+<meta name="description" content="RodCutting Problem:
+/**
+ * Created by andy on 17-3-28.
+ */
+public class RodCutting {
+    private int rodCutting(int[] p,int n){
+        if(n == 0) return 0;
+        int q  = Integer.MIN_VALUE;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="算法－动态规划">
 <meta property="og:url" content="http://yoursite.com/2017/03/28/algo-dp/index.html">
 <meta property="og:site_name" content="qilianghong">
-<meta property="og:description" content="RodCutting Problem:12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849/** * Created by andy on 17-3-28. */public class RodCutting &amp;#123;    private int rodCuttin">
-<meta property="og:updated_time" content="2017-03-27T23:28:45.303Z">
+<meta property="og:description" content="RodCutting Problem:
+/**
+ * Created by andy on 17-3-28.
+ */
+public class RodCutting {
+    private int rodCutting(int[] p,int n){
+        if(n == 0) return 0;
+        int q  = Integer.MIN_VALUE;">
+<meta property="og:updated_time" content="2017-03-30T12:26:39.561Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="算法－动态规划">
-<meta name="twitter:description" content="RodCutting Problem:12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849/** * Created by andy on 17-3-28. */public class RodCutting &amp;#123;    private int rodCuttin">
+<meta name="twitter:description" content="RodCutting Problem:
+/**
+ * Created by andy on 17-3-28.
+ */
+public class RodCutting {
+    private int rodCutting(int[] p,int n){
+        if(n == 0) return 0;
+        int q  = Integer.MIN_VALUE;">
 
 
 
@@ -316,8 +337,63 @@
 
       
         <ul>
-<li>RodCutting Problem:<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * Created by andy on 17-3-28.</div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">RodCutting</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">int</span> <span class="title">rodCutting</span><span class="params">(<span class="keyword">int</span>[] p,<span class="keyword">int</span> n)</span></span>&#123;</div><div class="line">        <span class="keyword">if</span>(n == <span class="number">0</span>) <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">        <span class="keyword">int</span> q  = Integer.MIN_VALUE;</div><div class="line"></div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=n;i++)&#123;</div><div class="line">            q = Math.max(q,p[i]+rodCutting(p,n-i-<span class="number">1</span>));</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> q;</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">int</span> <span class="title">memRodCutting</span><span class="params">(<span class="keyword">int</span>[] p,<span class="keyword">int</span> n)</span></span>&#123;</div><div class="line">        <span class="keyword">int</span>[] r = <span class="keyword">new</span> <span class="keyword">int</span>[p.length];</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i =<span class="number">0</span>;i&lt;p.length;i++)&#123;</div><div class="line">            r[i] =Integer.MIN_VALUE;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> memRodCuttingAux(p,n,r);</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">int</span> <span class="title">memRodCuttingAux</span><span class="params">(<span class="keyword">int</span>[] p,<span class="keyword">int</span> n,<span class="keyword">int</span>[] r)</span></span>&#123;</div><div class="line">        <span class="keyword">if</span>(r[n] &gt;<span class="number">0</span>) <span class="keyword">return</span> r[n];</div><div class="line">        <span class="keyword">int</span> q = Integer.MIN_VALUE;</div><div class="line">        <span class="keyword">if</span>(n == <span class="number">0</span>) <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">        <span class="keyword">else</span> &#123;</div><div class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)&#123;</div><div class="line">                q = Math.max(q,p[i]+memRodCuttingAux(p,n-i-<span class="number">1</span>,r));</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        r[n] = q;</div><div class="line">        <span class="keyword">return</span> q;</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">int</span> <span class="title">botomUpRodCut</span><span class="params">(<span class="keyword">int</span>[] p,<span class="keyword">int</span> n)</span></span>&#123;</div><div class="line">        <span class="keyword">if</span>(n ==<span class="number">0</span>) <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">        <span class="keyword">int</span>[] r = <span class="keyword">new</span> <span class="keyword">int</span>[n+<span class="number">1</span>];</div><div class="line"><span class="comment">//        for(int i=0;i&lt;n+1;i++)&#123;</span></div><div class="line"><span class="comment">//            r[i] =Integer.MIN_VALUE;</span></div><div class="line"><span class="comment">//        &#125;</span></div><div class="line"></div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</div><div class="line">            <span class="keyword">int</span> q = Integer.MIN_VALUE;</div><div class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;i;j++)&#123;</div><div class="line">                q = Math.max(q,p[j]+r[i-j-<span class="number">1</span>]);</div><div class="line">            &#125;</div><div class="line">            r[i] = q;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> r[n];</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<li><p>RodCutting Problem:</p>
+<pre><code class="java"><span class="comment">/**
+ * Created by andy on 17-3-28.
+ */</span>
+<span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">RodCutting</span> </span>{
+    <span class="function"><span class="keyword">private</span> <span class="keyword">int</span> <span class="title">rodCutting</span><span class="params">(<span class="keyword">int</span>[] p,<span class="keyword">int</span> n)</span></span>{
+        <span class="keyword">if</span>(n == <span class="number">0</span>) <span class="keyword">return</span> <span class="number">0</span>;
+        <span class="keyword">int</span> q  = Integer.MIN_VALUE;
+
+        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=n;i++){
+            q = Math.max(q,p[i]+rodCutting(p,n-i-<span class="number">1</span>));
+        }
+        <span class="keyword">return</span> q;
+    }
+    <span class="function"><span class="keyword">private</span> <span class="keyword">int</span> <span class="title">memRodCutting</span><span class="params">(<span class="keyword">int</span>[] p,<span class="keyword">int</span> n)</span></span>{
+        <span class="keyword">int</span>[] r = <span class="keyword">new</span> <span class="keyword">int</span>[p.length];
+        <span class="keyword">for</span>(<span class="keyword">int</span> i =<span class="number">0</span>;i&lt;p.length;i++){
+            r[i] =Integer.MIN_VALUE;
+        }
+        <span class="keyword">return</span> memRodCuttingAux(p,n,r);
+    }
+    <span class="function"><span class="keyword">private</span> <span class="keyword">int</span> <span class="title">memRodCuttingAux</span><span class="params">(<span class="keyword">int</span>[] p,<span class="keyword">int</span> n,<span class="keyword">int</span>[] r)</span></span>{
+        <span class="keyword">if</span>(r[n] &gt;<span class="number">0</span>) <span class="keyword">return</span> r[n];
+        <span class="keyword">int</span> q = Integer.MIN_VALUE;
+        <span class="keyword">if</span>(n == <span class="number">0</span>) <span class="keyword">return</span> <span class="number">0</span>;
+        <span class="keyword">else</span> {
+            <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++){
+                q = Math.max(q,p[i]+memRodCuttingAux(p,n-i-<span class="number">1</span>,r));
+            }
+        }
+        r[n] = q;
+        <span class="keyword">return</span> q;
+    }
+
+    <span class="function"><span class="keyword">private</span> <span class="keyword">int</span> <span class="title">botomUpRodCut</span><span class="params">(<span class="keyword">int</span>[] p,<span class="keyword">int</span> n)</span></span>{
+        <span class="keyword">if</span>(n ==<span class="number">0</span>) <span class="keyword">return</span> <span class="number">0</span>;
+        <span class="keyword">int</span>[] r = <span class="keyword">new</span> <span class="keyword">int</span>[n+<span class="number">1</span>];
+<span class="comment">//        for(int i=0;i&lt;n+1;i++){</span>
+<span class="comment">//            r[i] =Integer.MIN_VALUE;</span>
+<span class="comment">//        }</span>
+
+        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++){
+            <span class="keyword">int</span> q = Integer.MIN_VALUE;
+            <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;i;j++){
+                q = Math.max(q,p[j]+r[i-j-<span class="number">1</span>]);
+            }
+            r[i] = q;
+        }
+        <span class="keyword">return</span> r[n];
+    }
+}
+</code></pre>
 </li>
+</ul>
+<h4 id="动态规划的要素"><a href="#动态规划的要素" class="headerlink" title="动态规划的要素　　"></a>动态规划的要素　　</h4><ul>
+<li>最优子结构　　</li>
+<li>子问题重叠　　</li>
 </ul>
 
       
@@ -400,8 +476,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -450,6 +535,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#动态规划的要素"><span class="nav-number">1.</span> <span class="nav-text">动态规划的要素　　</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
     </div>
