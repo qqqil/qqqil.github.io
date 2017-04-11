@@ -84,37 +84,22 @@
 
 
 
-<meta name="description" content="spring 事务管理数据库事务是指一系列的操作被当做一个整体单元执行，这些执行单元要么全部执行，要么全部失败。ACID:  
+<meta name="description" content="Binary WatchA binary watch has 4 LEDs on the top which represent the hours (0-11), and the 6 LEDs on the bottom represent the minutes (0-59).
 
-Atomicity - 原子性,执行单元要么失败，要么成功；  
-Consistency- 一致性；  
-Isolation - 隔离性；  
-Durability - 持久性，当事务提交完成时，事务的数据应该持久化，不会因为系统的失败而丢失。  
-事务的隔离性：
-Tr">
+Each LED represents a zero or one, with the least signif">
 <meta property="og:type" content="article">
-<meta property="og:title" content="spring_transaction_management">
-<meta property="og:url" content="http://yoursite.com/2017/03/20/spring-transaction-management/index.html">
+<meta property="og:title" content="algo_backtracing">
+<meta property="og:url" content="http://yoursite.com/2017/04/11/algo-backtracing/index.html">
 <meta property="og:site_name" content="qilianghong">
-<meta property="og:description" content="spring 事务管理数据库事务是指一系列的操作被当做一个整体单元执行，这些执行单元要么全部执行，要么全部失败。ACID:  
+<meta property="og:description" content="Binary WatchA binary watch has 4 LEDs on the top which represent the hours (0-11), and the 6 LEDs on the bottom represent the minutes (0-59).
 
-Atomicity - 原子性,执行单元要么失败，要么成功；  
-Consistency- 一致性；  
-Isolation - 隔离性；  
-Durability - 持久性，当事务提交完成时，事务的数据应该持久化，不会因为系统的失败而丢失。  
-事务的隔离性：
-Tr">
-<meta property="og:updated_time" content="2017-03-20T16:08:22.068Z">
+Each LED represents a zero or one, with the least signif">
+<meta property="og:updated_time" content="2017-04-11T11:14:56.357Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="spring_transaction_management">
-<meta name="twitter:description" content="spring 事务管理数据库事务是指一系列的操作被当做一个整体单元执行，这些执行单元要么全部执行，要么全部失败。ACID:  
+<meta name="twitter:title" content="algo_backtracing">
+<meta name="twitter:description" content="Binary WatchA binary watch has 4 LEDs on the top which represent the hours (0-11), and the 6 LEDs on the bottom represent the minutes (0-59).
 
-Atomicity - 原子性,执行单元要么失败，要么成功；  
-Consistency- 一致性；  
-Isolation - 隔离性；  
-Durability - 持久性，当事务提交完成时，事务的数据应该持久化，不会因为系统的失败而丢失。  
-事务的隔离性：
-Tr">
+Each LED represents a zero or one, with the least signif">
 
 
 
@@ -142,13 +127,13 @@ Tr">
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/03/20/spring-transaction-management/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/04/11/algo-backtracing/"/>
 
 
 
 
 
-  <title> spring_transaction_management | qilianghong </title>
+  <title> algo_backtracing | qilianghong </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -261,7 +246,7 @@ Tr">
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/20/spring-transaction-management/">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/11/algo-backtracing/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="andy">
@@ -285,7 +270,7 @@ Tr">
             
             
               
-                spring_transaction_management
+                algo_backtracing
               
             
           </h1>
@@ -300,8 +285,8 @@ Tr">
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-20T22:57:15+08:00">
-                2017-03-20
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-11T19:13:58+08:00">
+                2017-04-11
               </time>
             
 
@@ -336,23 +321,11 @@ Tr">
       
 
       
-        <h4 id="spring-事务管理"><a href="#spring-事务管理" class="headerlink" title="spring 事务管理"></a>spring 事务管理</h4><p>数据库事务是指一系列的操作被当做一个整体单元执行，这些执行单元要么全部执行，要么全部失败。<br>ACID:  </p>
-<ol>
-<li>Atomicity - 原子性,执行单元要么失败，要么成功；  </li>
-<li>Consistency- 一致性；  </li>
-<li>Isolation - 隔离性；  </li>
-<li><p>Durability - 持久性，当事务提交完成时，事务的数据应该持久化，不会因为系统的失败而丢失。  </p>
-<h4 id="事务的隔离性："><a href="#事务的隔离性：" class="headerlink" title="事务的隔离性："></a>事务的隔离性：</h4><ol>
-<li><p>TransactionDefinition.ISOLATION_DEFAULT  </p>
-</li>
-<li><p>TransactionDefinition.ISOLATION_READ_COMMITTED<br>避免脏读</p>
-</li>
-<li>TransactionDefinition.ISOLATION_READ_UNCOMMITTED<br>可能发生脏读，幻读和重复读  </li>
-<li>TransactionDefinition.ISOLATION_REPEATABLE_READ<br>避免可重复读，无法避免幻读  </li>
-<li>TransactionDefinition.ISOLATION_SERIALIZABLE<br>可避免幻读  <h4 id="隔离解释："><a href="#隔离解释：" class="headerlink" title="隔离解释："></a>隔离解释：</h4>脏读： 读到未提交数据<br>不可重复读： 在一个事务内能够读到新commit的数据，读到不同的数据<br>幻读： 在一个事务内，多次读到不同的数据  </li>
-</ol>
-</li>
-</ol>
+        <ul>
+<li>Binary Watch<br>A binary watch has 4 LEDs on the top which represent the hours (0-11), and the 6 LEDs on the bottom represent the minutes (0-59).</li>
+</ul>
+<p>Each LED represents a zero or one, with the least significant bit on the right.<br>Given a non-negative integer n which represents the number of LEDs that are currently on, return all possible times the watch could represent.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="comment">/**backtracing</span></div><div class="line">**/</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</div><div class="line">    List&lt;String&gt; watchs = <span class="keyword">new</span> LinkedList&lt;String&gt;();</div><div class="line">    <span class="function"><span class="keyword">public</span> List&lt;String&gt; <span class="title">readBinaryWatch</span><span class="params">(<span class="keyword">int</span> num)</span> </span>&#123;</div><div class="line">        readBinaryWatches(num,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>);</div><div class="line">        <span class="keyword">return</span> watchs;</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">readBinaryWatches</span><span class="params">(<span class="keyword">int</span> num,<span class="keyword">int</span> idx,<span class="keyword">int</span> w,<span class="keyword">int</span> count)</span></span>&#123;</div><div class="line">        <span class="keyword">if</span>(idx &gt; <span class="number">10</span>)&#123;</div><div class="line">            <span class="keyword">if</span>(count == num)&#123;</div><div class="line">                <span class="keyword">int</span> hours = w &gt;&gt;<span class="number">6</span>;</div><div class="line">                <span class="keyword">int</span> mints = w&amp;(<span class="number">0x3f</span>);</div><div class="line">                <span class="keyword">if</span>(hours &gt;=<span class="number">12</span> || mints &gt;=<span class="number">60</span>) <span class="keyword">return</span>;</div><div class="line">                watchs.add(hours+<span class="string">":"</span>+String.format(<span class="string">"%02d"</span>,mints));</div><div class="line">            &#125;</div><div class="line">            <span class="keyword">return</span>;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">            readBinaryWatches(num,idx+<span class="number">1</span>,w|(<span class="number">0x01</span>&lt;&lt;idx),count+<span class="number">1</span>);</div><div class="line">            readBinaryWatches(num,idx+<span class="number">1</span>,w,count);</div><div class="line"></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -379,8 +352,8 @@ Tr">
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/03/14/algo-search/" rel="next" title="算法-查找">
-                <i class="fa fa-chevron-left"></i> 算法-查找
+              <a href="/2017/03/28/algo-dp/" rel="next" title="算法－动态规划">
+                <i class="fa fa-chevron-left"></i> 算法－动态规划
               </a>
             
           </div>
@@ -388,10 +361,6 @@ Tr">
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/03/21/database-index/" rel="prev" title="数据库-索引">
-                数据库-索引 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -438,17 +407,8 @@ Tr">
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -497,22 +457,6 @@ Tr">
 
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#spring-事务管理"><span class="nav-number">1.</span> <span class="nav-text">spring 事务管理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#事务的隔离性："><span class="nav-number">2.</span> <span class="nav-text">事务的隔离性：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#隔离解释："><span class="nav-number">3.</span> <span class="nav-text">隔离解释：</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
     </div>
