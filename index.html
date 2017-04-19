@@ -238,6 +238,205 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/19/netty/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="andy">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/avatar.gif">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="qilianghong">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="qilianghong" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/04/19/netty/" itemprop="url">
+                  netty学习笔记
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-19T21:28:16+08:00">
+                2017-04-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="Netty"><a href="#Netty" class="headerlink" title="Netty"></a>Netty</h3><ul>
+<li>Transport Service</li>
+<li>Protocol Support  </li>
+<li>Core  </li>
+</ul>
+<h5 id="core"><a href="#core" class="headerlink" title="core"></a>core</h5><ul>
+<li>Extensible Event Model  </li>
+<li>Universal Communication API  </li>
+<li>Zero-Copy-Capable Rich Byte Buffer  </li>
+</ul>
+<h4 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h4><ul>
+<li>Asynchronous</li>
+<li>Unified API  </li>
+<li>High-Performance  </li>
+<li>Buffer Pooling  </li>
+<li>Gathering/Scattering  </li>
+</ul>
+<h4 id="why-not-non-blocking-at-all"><a href="#why-not-non-blocking-at-all" class="headerlink" title="why not non-blocking at all"></a>why not non-blocking at all</h4><p>a thread takes memory from 256kb to 1mb for the stack space  </p>
+<h4 id="bytebuffer"><a href="#bytebuffer" class="headerlink" title="bytebuffer"></a>bytebuffer</h4><h4 id="ChannelHandler-where-your-handling-logic-lifes"><a href="#ChannelHandler-where-your-handling-logic-lifes" class="headerlink" title="ChannelHandler  -where your handling logic lifes"></a>ChannelHandler  -where your handling logic lifes</h4><ul>
+<li>inbound and outbound</li>
+<li>called by the eventExecutor  </li>
+</ul>
+<h6 id="channelInboundHandler"><a href="#channelInboundHandler" class="headerlink" title="channelInboundHandler"></a>channelInboundHandler</h6><ul>
+<li>bind</li>
+<li>connect</li>
+<li>disconnect</li>
+<li>close</li>
+<li>deregister</li>
+<li>read</li>
+<li>write</li>
+<li>flush</li>
+</ul>
+<h4 id="calling-method-directly-vs-fire-event-objects"><a href="#calling-method-directly-vs-fire-event-objects" class="headerlink" title="calling method directly vs. fire event objects"></a>calling method directly vs. fire event objects</h4><ul>
+<li>NAN</li>
+</ul>
+<h3 id="provided-Encoder-Decoder"><a href="#provided-Encoder-Decoder" class="headerlink" title="provided Encoder /Decoder"></a>provided Encoder /Decoder</h3><ul>
+<li>HTTP/HTTP2  </li>
+<li>WebSockets  </li>
+<li>SPDY  </li>
+<li>SSL/TLS  </li>
+<li>Serialization  </li>
+<li>GZip/Deflate  </li>
+</ul>
+<h4 id="Decoder-base-class-gt-inBound"><a href="#Decoder-base-class-gt-inBound" class="headerlink" title="Decoder base class ==&gt;inBound"></a>Decoder base class ==&gt;inBound</h4><ul>
+<li>ByteToMessageDecoder</li>
+<li>MessageToMEssageDecoder<br>Generic userfule Decoders</li>
+</ul>
+<ol>
+<li>ReplayDecoder  </li>
+<li>FixedLengthFrameDecoder</li>
+<li>LengthFieldBasedFrameDecoder</li>
+<li>LineBaseFrameDecoder</li>
+<li>DelimiterBasedFrameDecoder</li>
+</ol>
+<h4 id="Encoder-base-class-gt-outbound"><a href="#Encoder-base-class-gt-outbound" class="headerlink" title="Encoder base class ==&gt; outbound"></a>Encoder base class ==&gt; outbound</h4><ul>
+<li>MessateToByteEncoder  </li>
+<li>MessageToMessageEncoder  </li>
+</ul>
+<h4 id="channelPipeLine-how-does-it-work"><a href="#channelPipeLine-how-does-it-work" class="headerlink" title="channelPipeLine - how does it work"></a>channelPipeLine - how does it work</h4><pre><code class="java">Channel ch =..;
+ChannelPipeline p = ch.pipeline();
+EventExecutor e1 = <span class="keyword">new</span> DefualtEventExecutor(<span class="number">16</span>);
+EventExecutor e2 = <span class="keyword">new</span> DefualtEventExecutor(<span class="number">8</span>);
+
+p.addLast(<span class="keyword">new</span> MyProtocolCodec());
+p.addLast(e1,<span class="keyword">new</span> MyDatabaseAccessingHandler());
+p.addLast(e2,<span class="keyword">new</span> MyHardDiskAccessingHAndler());
+</code></pre>
+<h4 id="EventLoop-Facts"><a href="#EventLoop-Facts" class="headerlink" title="EventLoop -Facts"></a>EventLoop -Facts</h4><ul>
+<li>Powers 0-n Channels</li>
+<li>Bound to 1 Thread　</li>
+</ul>
+<h4 id="Bootstrap-Start-and-stop-applications"><a href="#Bootstrap-Start-and-stop-applications" class="headerlink" title="Bootstrap -Start and stop applications"></a>Bootstrap -Start and stop applications</h4><ul>
+<li>Fluent -API /DSL  </li>
+<li>Graceful shutdown</li>
+<li>Unified way to startup  </li>
+</ul>
+<h4 id="Native-Epoll-Transport"><a href="#Native-Epoll-Transport" class="headerlink" title="Native Epoll Transport"></a>Native Epoll Transport</h4><ul>
+<li>Epoll ET</li>
+<li>TCP_CORK,SO_REUSEADDR  </li>
+<li>TCP,UDP  </li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
   <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/11/algo-backtracing/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1416,124 +1615,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/09/database/">
-
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="andy">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="/images/avatar.gif">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="qilianghong">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="qilianghong" src="">
-    </span>
-  </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/03/09/database/" itemprop="url">
-                  database
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-09T23:45:31+08:00">
-                2017-03-09
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h4 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h4>
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1581,7 +1662,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-count">12</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>

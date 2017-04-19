@@ -84,25 +84,55 @@
 
 
 
-<meta name="description" content="索引索引更有效
-索引快的数量通常比数据块的数量要少；
-由于键被排序，可以使用二分查找来查找k，O（logn）；
-索引文件可能足够小，以至于可以永久的存在在组村缓存区中，这样查找键值k只需要做主存访问，而不需做I/O操作。">
+<meta name="description" content="Netty
+Transport Service
+Protocol Support  
+Core  
+
+core
+Extensible Event Model  
+Universal Communication API  
+Zero-Copy-Capable Rich Byte Buffer  
+
+Overview
+Asynchronous
+Unified API  
+High-Performanc">
 <meta property="og:type" content="article">
-<meta property="og:title" content="数据库-索引">
-<meta property="og:url" content="http://yoursite.com/2017/03/21/database-index/index.html">
+<meta property="og:title" content="netty学习笔记">
+<meta property="og:url" content="http://yoursite.com/2017/04/19/netty/index.html">
 <meta property="og:site_name" content="qilianghong">
-<meta property="og:description" content="索引索引更有效
-索引快的数量通常比数据块的数量要少；
-由于键被排序，可以使用二分查找来查找k，O（logn）；
-索引文件可能足够小，以至于可以永久的存在在组村缓存区中，这样查找键值k只需要做主存访问，而不需做I/O操作。">
-<meta property="og:updated_time" content="2017-03-20T16:32:23.684Z">
+<meta property="og:description" content="Netty
+Transport Service
+Protocol Support  
+Core  
+
+core
+Extensible Event Model  
+Universal Communication API  
+Zero-Copy-Capable Rich Byte Buffer  
+
+Overview
+Asynchronous
+Unified API  
+High-Performanc">
+<meta property="og:updated_time" content="2017-04-19T14:24:04.781Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="数据库-索引">
-<meta name="twitter:description" content="索引索引更有效
-索引快的数量通常比数据块的数量要少；
-由于键被排序，可以使用二分查找来查找k，O（logn）；
-索引文件可能足够小，以至于可以永久的存在在组村缓存区中，这样查找键值k只需要做主存访问，而不需做I/O操作。">
+<meta name="twitter:title" content="netty学习笔记">
+<meta name="twitter:description" content="Netty
+Transport Service
+Protocol Support  
+Core  
+
+core
+Extensible Event Model  
+Universal Communication API  
+Zero-Copy-Capable Rich Byte Buffer  
+
+Overview
+Asynchronous
+Unified API  
+High-Performanc">
 
 
 
@@ -130,13 +160,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/03/21/database-index/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/04/19/netty/"/>
 
 
 
 
 
-  <title> 数据库-索引 | qilianghong </title>
+  <title> netty学习笔记 | qilianghong </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -249,7 +279,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/21/database-index/">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/19/netty/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="andy">
@@ -273,7 +303,7 @@
             
             
               
-                数据库-索引
+                netty学习笔记
               
             
           </h1>
@@ -288,8 +318,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-21T00:08:31+08:00">
-                2017-03-21
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-19T21:28:16+08:00">
+                2017-04-19
               </time>
             
 
@@ -324,11 +354,87 @@
       
 
       
-        <h4 id="索引"><a href="#索引" class="headerlink" title="索引"></a>索引</h4><h6 id="索引更有效"><a href="#索引更有效" class="headerlink" title="索引更有效"></a>索引更有效</h6><ol>
-<li>索引快的数量通常比数据块的数量要少；</li>
-<li>由于键被排序，可以使用二分查找来查找k，O（logn）；</li>
-<li>索引文件可能足够小，以至于可以永久的存在在组村缓存区中，这样查找键值k只需要做主存访问，而不需做I/O操作。</li>
+        <h3 id="Netty"><a href="#Netty" class="headerlink" title="Netty"></a>Netty</h3><ul>
+<li>Transport Service</li>
+<li>Protocol Support  </li>
+<li>Core  </li>
+</ul>
+<h5 id="core"><a href="#core" class="headerlink" title="core"></a>core</h5><ul>
+<li>Extensible Event Model  </li>
+<li>Universal Communication API  </li>
+<li>Zero-Copy-Capable Rich Byte Buffer  </li>
+</ul>
+<h4 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h4><ul>
+<li>Asynchronous</li>
+<li>Unified API  </li>
+<li>High-Performance  </li>
+<li>Buffer Pooling  </li>
+<li>Gathering/Scattering  </li>
+</ul>
+<h4 id="why-not-non-blocking-at-all"><a href="#why-not-non-blocking-at-all" class="headerlink" title="why not non-blocking at all"></a>why not non-blocking at all</h4><p>a thread takes memory from 256kb to 1mb for the stack space  </p>
+<h4 id="bytebuffer"><a href="#bytebuffer" class="headerlink" title="bytebuffer"></a>bytebuffer</h4><h4 id="ChannelHandler-where-your-handling-logic-lifes"><a href="#ChannelHandler-where-your-handling-logic-lifes" class="headerlink" title="ChannelHandler  -where your handling logic lifes"></a>ChannelHandler  -where your handling logic lifes</h4><ul>
+<li>inbound and outbound</li>
+<li>called by the eventExecutor  </li>
+</ul>
+<h6 id="channelInboundHandler"><a href="#channelInboundHandler" class="headerlink" title="channelInboundHandler"></a>channelInboundHandler</h6><ul>
+<li>bind</li>
+<li>connect</li>
+<li>disconnect</li>
+<li>close</li>
+<li>deregister</li>
+<li>read</li>
+<li>write</li>
+<li>flush</li>
+</ul>
+<h4 id="calling-method-directly-vs-fire-event-objects"><a href="#calling-method-directly-vs-fire-event-objects" class="headerlink" title="calling method directly vs. fire event objects"></a>calling method directly vs. fire event objects</h4><ul>
+<li>NAN</li>
+</ul>
+<h3 id="provided-Encoder-Decoder"><a href="#provided-Encoder-Decoder" class="headerlink" title="provided Encoder /Decoder"></a>provided Encoder /Decoder</h3><ul>
+<li>HTTP/HTTP2  </li>
+<li>WebSockets  </li>
+<li>SPDY  </li>
+<li>SSL/TLS  </li>
+<li>Serialization  </li>
+<li>GZip/Deflate  </li>
+</ul>
+<h4 id="Decoder-base-class-gt-inBound"><a href="#Decoder-base-class-gt-inBound" class="headerlink" title="Decoder base class ==&gt;inBound"></a>Decoder base class ==&gt;inBound</h4><ul>
+<li>ByteToMessageDecoder</li>
+<li>MessageToMEssageDecoder<br>Generic userfule Decoders</li>
+</ul>
+<ol>
+<li>ReplayDecoder  </li>
+<li>FixedLengthFrameDecoder</li>
+<li>LengthFieldBasedFrameDecoder</li>
+<li>LineBaseFrameDecoder</li>
+<li>DelimiterBasedFrameDecoder</li>
 </ol>
+<h4 id="Encoder-base-class-gt-outbound"><a href="#Encoder-base-class-gt-outbound" class="headerlink" title="Encoder base class ==&gt; outbound"></a>Encoder base class ==&gt; outbound</h4><ul>
+<li>MessateToByteEncoder  </li>
+<li>MessageToMessageEncoder  </li>
+</ul>
+<h4 id="channelPipeLine-how-does-it-work"><a href="#channelPipeLine-how-does-it-work" class="headerlink" title="channelPipeLine - how does it work"></a>channelPipeLine - how does it work</h4><pre><code class="java">Channel ch =..;
+ChannelPipeline p = ch.pipeline();
+EventExecutor e1 = <span class="keyword">new</span> DefualtEventExecutor(<span class="number">16</span>);
+EventExecutor e2 = <span class="keyword">new</span> DefualtEventExecutor(<span class="number">8</span>);
+
+p.addLast(<span class="keyword">new</span> MyProtocolCodec());
+p.addLast(e1,<span class="keyword">new</span> MyDatabaseAccessingHandler());
+p.addLast(e2,<span class="keyword">new</span> MyHardDiskAccessingHAndler());
+</code></pre>
+<h4 id="EventLoop-Facts"><a href="#EventLoop-Facts" class="headerlink" title="EventLoop -Facts"></a>EventLoop -Facts</h4><ul>
+<li>Powers 0-n Channels</li>
+<li>Bound to 1 Thread　</li>
+</ul>
+<h4 id="Bootstrap-Start-and-stop-applications"><a href="#Bootstrap-Start-and-stop-applications" class="headerlink" title="Bootstrap -Start and stop applications"></a>Bootstrap -Start and stop applications</h4><ul>
+<li>Fluent -API /DSL  </li>
+<li>Graceful shutdown</li>
+<li>Unified way to startup  </li>
+</ul>
+<h4 id="Native-Epoll-Transport"><a href="#Native-Epoll-Transport" class="headerlink" title="Native Epoll Transport"></a>Native Epoll Transport</h4><ul>
+<li>Epoll ET</li>
+<li>TCP_CORK,SO_REUSEADDR  </li>
+<li>TCP,UDP  </li>
+</ul>
 
       
     </div>
@@ -355,8 +461,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/03/20/spring-transaction-management/" rel="next" title="spring_transaction_management">
-                <i class="fa fa-chevron-left"></i> spring_transaction_management
+              <a href="/2017/04/11/algo-backtracing/" rel="next" title="算法－回溯法">
+                <i class="fa fa-chevron-left"></i> 算法－回溯法
               </a>
             
           </div>
@@ -364,10 +470,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/03/22/datastructure-java-tree/" rel="prev" title="数据结构_java_tree">
-                数据结构_java_tree <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -483,7 +585,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#索引"><span class="nav-number">1.</span> <span class="nav-text">索引</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#索引更有效"><span class="nav-number">1.0.1.</span> <span class="nav-text">索引更有效</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Netty"><span class="nav-number">1.</span> <span class="nav-text">Netty</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#core"><span class="nav-number">1.0.1.</span> <span class="nav-text">core</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Overview"><span class="nav-number">1.1.</span> <span class="nav-text">Overview</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#why-not-non-blocking-at-all"><span class="nav-number">1.2.</span> <span class="nav-text">why not non-blocking at all</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#bytebuffer"><span class="nav-number">1.3.</span> <span class="nav-text">bytebuffer</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ChannelHandler-where-your-handling-logic-lifes"><span class="nav-number">1.4.</span> <span class="nav-text">ChannelHandler  -where your handling logic lifes</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#channelInboundHandler"><span class="nav-number">1.4.0.1.</span> <span class="nav-text">channelInboundHandler</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#calling-method-directly-vs-fire-event-objects"><span class="nav-number">1.5.</span> <span class="nav-text">calling method directly vs. fire event objects</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#provided-Encoder-Decoder"><span class="nav-number">2.</span> <span class="nav-text">provided Encoder /Decoder</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Decoder-base-class-gt-inBound"><span class="nav-number">2.1.</span> <span class="nav-text">Decoder base class ==>inBound</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Encoder-base-class-gt-outbound"><span class="nav-number">2.2.</span> <span class="nav-text">Encoder base class ==> outbound</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#channelPipeLine-how-does-it-work"><span class="nav-number">2.3.</span> <span class="nav-text">channelPipeLine - how does it work</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#EventLoop-Facts"><span class="nav-number">2.4.</span> <span class="nav-text">EventLoop -Facts</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Bootstrap-Start-and-stop-applications"><span class="nav-number">2.5.</span> <span class="nav-text">Bootstrap -Start and stop applications</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Native-Epoll-Transport"><span class="nav-number">2.6.</span> <span class="nav-text">Native Epoll Transport</span></a></li></ol></li></ol></div>
             
 
           </div>
