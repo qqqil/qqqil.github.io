@@ -84,46 +84,28 @@
 
 
 
-<meta name="description" content="网络结构　
-硬件层 　
-软件网络  
-模型  
+<meta name="description" content="Happens-before ordering
+Synchronized method and blocks
+volatile fields  
 
-数据链路层
-错误控制 定时器进行超时控制 帧序号避免重发 纠错码,校验和  
-流量控制基于反馈的流量控制滑动窗口　　
-逻辑链路控制802.2网络协议　　
-
-网络层　　  路由算法：  自适应算法，非自适应算法  自适应会根据流量进行调节变化  拥塞控制：  拥塞控制面向整个网络，流量控制是点对点  开环控制和闭环控制  开环是不考虑当前网络的环境">
+Synchronization is needed for blocking and visibility">
 <meta property="og:type" content="article">
-<meta property="og:title" content="网络">
-<meta property="og:url" content="http://yoursite.com/2017/03/23/computer-network/index.html">
+<meta property="og:title" content="java_memory_model">
+<meta property="og:url" content="http://yoursite.com/2017/04/19/java-memory-model/index.html">
 <meta property="og:site_name" content="qilianghong">
-<meta property="og:description" content="网络结构　
-硬件层 　
-软件网络  
-模型  
+<meta property="og:description" content="Happens-before ordering
+Synchronized method and blocks
+volatile fields  
 
-数据链路层
-错误控制 定时器进行超时控制 帧序号避免重发 纠错码,校验和  
-流量控制基于反馈的流量控制滑动窗口　　
-逻辑链路控制802.2网络协议　　
-
-网络层　　  路由算法：  自适应算法，非自适应算法  自适应会根据流量进行调节变化  拥塞控制：  拥塞控制面向整个网络，流量控制是点对点  开环控制和闭环控制  开环是不考虑当前网络的环境">
-<meta property="og:updated_time" content="2017-03-27T23:29:46.200Z">
+Synchronization is needed for blocking and visibility">
+<meta property="og:updated_time" content="2017-04-19T14:40:54.135Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="网络">
-<meta name="twitter:description" content="网络结构　
-硬件层 　
-软件网络  
-模型  
+<meta name="twitter:title" content="java_memory_model">
+<meta name="twitter:description" content="Happens-before ordering
+Synchronized method and blocks
+volatile fields  
 
-数据链路层
-错误控制 定时器进行超时控制 帧序号避免重发 纠错码,校验和  
-流量控制基于反馈的流量控制滑动窗口　　
-逻辑链路控制802.2网络协议　　
-
-网络层　　  路由算法：  自适应算法，非自适应算法  自适应会根据流量进行调节变化  拥塞控制：  拥塞控制面向整个网络，流量控制是点对点  开环控制和闭环控制  开环是不考虑当前网络的环境">
+Synchronization is needed for blocking and visibility">
 
 
 
@@ -151,13 +133,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/03/23/computer-network/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/04/19/java-memory-model/"/>
 
 
 
 
 
-  <title> 网络 | qilianghong </title>
+  <title> java_memory_model | qilianghong </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -270,7 +252,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/23/computer-network/">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/19/java-memory-model/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="andy">
@@ -294,7 +276,7 @@
             
             
               
-                网络
+                java_memory_model
               
             
           </h1>
@@ -309,8 +291,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-23T04:51:17+08:00">
-                2017-03-23
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-19T22:32:45+08:00">
+                2017-04-19
               </time>
             
 
@@ -345,22 +327,11 @@
       
 
       
-        <h4 id="网络结构"><a href="#网络结构" class="headerlink" title="网络结构　"></a>网络结构　</h4><ol>
-<li>硬件层 　</li>
-<li>软件网络  </li>
-<li>模型  </li>
+        <h5 id="Happens-before-ordering"><a href="#Happens-before-ordering" class="headerlink" title="Happens-before ordering"></a>Happens-before ordering</h5><ol>
+<li>Synchronized method and blocks</li>
+<li>volatile fields  </li>
 </ol>
-<h4 id="数据链路层"><a href="#数据链路层" class="headerlink" title="数据链路层"></a>数据链路层</h4><ul>
-<li>错误控制<br> 定时器进行超时控制<br> 帧序号避免重发<br> 纠错码,校验和  </li>
-<li>流量控制<br>基于反馈的流量控制<br>滑动窗口　　</li>
-<li>逻辑链路控制<br>802.2网络协议　　</li>
-</ul>
-<h4 id="网络层"><a href="#网络层" class="headerlink" title="网络层　　"></a>网络层　　</h4><p>  路由算法：<br>  自适应算法，非自适应算法<br>  自适应会根据流量进行调节变化<br>  拥塞控制：<br>  拥塞控制面向整个网络，流量控制是点对点<br>  开环控制和闭环控制<br>  开环是不考虑当前网络的环境<br>  闭环是基于在反馈环路的基础之上<br>  icmp 网络控制协议<br>  arp 地址解析协议　　</p>
-<h4 id="传输层"><a href="#传输层" class="headerlink" title="传输层　　"></a>传输层　　</h4><p>  MTU:最大传输单元<br>  滑动窗口的控制<br>  Ｎagle算法  </p>
-<p>  　
-  　　
-  　</p>
-
+<h4 id="Synchronization-is-needed-for-blocking-and-visibility"><a href="#Synchronization-is-needed-for-blocking-and-visibility" class="headerlink" title="Synchronization is needed for blocking and visibility"></a>Synchronization is needed for blocking and visibility</h4>
       
     </div>
 
@@ -386,8 +357,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/03/22/searching-tree/" rel="next" title="searching_tree">
-                <i class="fa fa-chevron-left"></i> searching_tree
+              <a href="/2017/04/19/netty/" rel="next" title="netty学习笔记">
+                <i class="fa fa-chevron-left"></i> netty学习笔记
               </a>
             
           </div>
@@ -396,8 +367,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/03/28/algo-dp/" rel="prev" title="算法－动态规划">
-                算法－动态规划 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/04/20/proactor/" rel="prev" title="proactor笔记">
+                proactor笔记 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -514,7 +485,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#网络结构"><span class="nav-number">1.</span> <span class="nav-text">网络结构　</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数据链路层"><span class="nav-number">2.</span> <span class="nav-text">数据链路层</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#网络层"><span class="nav-number">3.</span> <span class="nav-text">网络层　　</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#传输层"><span class="nav-number">4.</span> <span class="nav-text">传输层　　</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#Happens-before-ordering"><span class="nav-number">1.</span> <span class="nav-text">Happens-before ordering</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Synchronization-is-needed-for-blocking-and-visibility"><span class="nav-number"></span> <span class="nav-text">Synchronization is needed for blocking and visibility</span></a></div>
             
 
           </div>

@@ -238,6 +238,263 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/14/algo-search/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="andy">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/avatar.gif">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="qilianghong">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="qilianghong" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/03/14/algo-search/" itemprop="url">
+                  算法-查找
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-14T23:36:27+08:00">
+                2017-03-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="查找"><a href="#查找" class="headerlink" title="查找"></a>查找</h3><ol>
+<li>binary search  <figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">binarySearch</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; &amp;nums,<span class="keyword">int</span> target)</span></span>&#123;</div><div class="line">    <span class="keyword">int</span> lo = <span class="number">0</span>;</div><div class="line">    <span class="keyword">int</span> hi = nums.size() <span class="number">-1</span>;</div><div class="line">    <span class="keyword">while</span>(lo &lt;=hi)&#123;</div><div class="line">        <span class="keyword">int</span> mid = lo + (hi - lo)/<span class="number">2</span>;</div><div class="line">        <span class="keyword">if</span>(nums[mid] == target)&#123;</div><div class="line">            <span class="keyword">return</span> mid;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">if</span>(nums[mid] &gt; target)&#123;</div><div class="line">            hi = mid<span class="number">-1</span>;</div><div class="line">        &#125;<span class="keyword">else</span>&#123;</div><div class="line">            lo = mid+<span class="number">1</span>;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="number">-1</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/10/sorting/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="andy">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/avatar.gif">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="qilianghong">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="qilianghong" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/03/10/sorting/" itemprop="url">
+                  排序
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-10T23:44:36+08:00">
+                2017-03-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h4 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h4><ol>
+<li><p>选择排序  </p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">selection_sorting</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; &amp;nums)</span></span>&#123;</div><div class="line">    <span class="keyword">int</span> sz = nums.size();</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;sz;i++)&#123;</div><div class="line">        <span class="keyword">int</span> min = i;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j =i+<span class="number">1</span>;j&lt;sz;j++)&#123;</div><div class="line">            <span class="keyword">if</span>(nums[j] &lt;nums[i])&#123;</div><div class="line">                min =j;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="comment">//exch</span></div><div class="line">        <span class="keyword">int</span> tmp = nums[i];</div><div class="line">        nums[i] = nums[min];</div><div class="line">        nums[min] = tmp;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>插入排序  </p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">exch</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; &amp;nums,<span class="keyword">int</span> i,<span class="keyword">int</span> j)</span></span>&#123;</div><div class="line">    <span class="keyword">int</span> tmp = nums[i];</div><div class="line">    nums[i] = nums[j];</div><div class="line">    nums[j] = tmp;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">bool</span> <span class="title">mless</span><span class="params">(<span class="keyword">int</span> val1,<span class="keyword">int</span> val2)</span></span>&#123;</div><div class="line">    <span class="keyword">return</span> val1 &lt;val2;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">insert_sorting</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; &amp;nums)</span></span>&#123;</div><div class="line">    <span class="keyword">size_t</span>  sz = nums.size();</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;sz;i++)&#123;</div><div class="line">      <span class="keyword">for</span>(<span class="keyword">int</span> j =i;j&gt;<span class="number">0</span>;j--)&#123;</div><div class="line">          <span class="keyword">if</span>(mless(nums[j],nums[j<span class="number">-1</span>]))&#123;</div><div class="line">              exch(nums,j,j<span class="number">-1</span>);</div><div class="line">          &#125;</div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>希尔排序  </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">boolean</span> <span class="title">less</span><span class="params">(<span class="keyword">int</span> i,<span class="keyword">int</span> j)</span></span>&#123;</div><div class="line">    <span class="keyword">return</span> i&lt;=j;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">exch</span><span class="params">(<span class="keyword">int</span> nums[],<span class="keyword">int</span> i,<span class="keyword">int</span> j)</span></span>&#123;</div><div class="line">    <span class="keyword">int</span> tmp = nums[i];</div><div class="line">    nums[i] = nums[j];</div><div class="line">    nums[j] = tmp;</div><div class="line"></div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">shellSort</span><span class="params">(<span class="keyword">int</span>[] nums)</span></span>&#123;</div><div class="line">    <span class="keyword">int</span> N = nums.length;</div><div class="line">    <span class="keyword">int</span> h = <span class="number">1</span>;</div><div class="line">    <span class="keyword">while</span>(h&lt;N/<span class="number">5</span>) h = h*<span class="number">5</span>+<span class="number">1</span>;</div><div class="line">    <span class="keyword">while</span>(h &gt;=<span class="number">1</span>)&#123;</div><div class="line">        logger.info(<span class="string">"h ="</span>+h);</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = h;i&lt;N;i++)&#123;</div><div class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = i;j&gt;=h &amp;&amp; less(nums[j],nums[j-h]);j=j-h)&#123;</div><div class="line">                exch(nums,j,j-h);</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        h = h/<span class="number">5</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>快速排序</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">int</span> <span class="title">partition</span><span class="params">(<span class="keyword">int</span> nums[],<span class="keyword">int</span> left,<span class="keyword">int</span> right,<span class="keyword">int</span> pivot)</span></span>&#123;</div><div class="line">     <span class="keyword">int</span> rightIndex = right - <span class="number">1</span>;</div><div class="line">     <span class="keyword">while</span> (<span class="keyword">true</span>)&#123;</div><div class="line">         <span class="keyword">while</span> (left&lt;=rightIndex &amp;&amp; nums[left]&lt;pivot) left++;</div><div class="line">         <span class="keyword">while</span> (rightIndex &gt;<span class="number">0</span> &amp;&amp; nums[rightIndex] &gt;pivot) rightIndex--;</div><div class="line">         <span class="keyword">if</span>(left &gt;= rightIndex) <span class="keyword">break</span>;</div><div class="line">         exch(nums,left,rightIndex);</div><div class="line">     &#125;</div><div class="line">     exch(nums,left,right);</div><div class="line">     <span class="keyword">return</span> left;</div><div class="line"> &#125;</div><div class="line"> <span class="comment">//complexity:time(logn) ,space(1)</span></div><div class="line"> <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">quickSort</span><span class="params">(<span class="keyword">int</span> nums[],<span class="keyword">int</span> left,<span class="keyword">int</span> right)</span></span>&#123;</div><div class="line">     <span class="keyword">if</span>(left &gt;= right)&#123;</div><div class="line">         <span class="keyword">return</span>;</div><div class="line">     &#125;</div><div class="line">     <span class="keyword">int</span> pivot = nums[right];</div><div class="line">     <span class="keyword">int</span> partition = partition(nums,left,right,pivot);</div><div class="line">     quickSort(nums,left,partition-<span class="number">1</span>);</div><div class="line">     quickSort(nums,partition+<span class="number">1</span>,right);</div><div class="line"> &#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>归并排序  </p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">merge</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; &amp;nums1,<span class="keyword">int</span> l,<span class="keyword">int</span> mid,<span class="keyword">int</span> r)</span></span>&#123;</div><div class="line">    <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; rtn(nums1.size());</div><div class="line">    <span class="keyword">int</span> idx1=l;</div><div class="line">    <span class="keyword">int</span> idx2 =mid;</div><div class="line">    <span class="keyword">int</span> tmpIdx =l;</div><div class="line">    <span class="keyword">while</span>(idx1 &lt; mid  &amp;&amp; idx2 &lt;r)&#123;</div><div class="line">        <span class="keyword">if</span>(nums1[idx1] &lt; nums1[idx2])&#123;</div><div class="line">            rtn[tmpIdx++] = nums1[idx1++];</div><div class="line">        &#125;<span class="keyword">else</span>&#123;</div><div class="line">            rtn[tmpIdx++] = nums1[idx2++];</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">while</span> (idx1 &lt; mid)&#123;</div><div class="line">        rtn[tmpIdx++] = nums1[idx1++];</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">while</span> (idx2 &lt;r)&#123;</div><div class="line">        rtn[tmpIdx++] = nums1[idx2++];</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i =l;i &lt;r;i++)&#123;</div><div class="line">        nums1[i] = rtn[i];</div><div class="line">    &#125;</div><div class="line">&#125;  </div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">mergeSort</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; &amp;nums,<span class="keyword">int</span> lhs,<span class="keyword">int</span> rhs)</span></span>&#123;</div><div class="line">    <span class="keyword">if</span>(rhs - lhs &lt;<span class="number">2</span>) <span class="keyword">return</span>;</div><div class="line">    <span class="keyword">int</span> mid = lhs +(rhs - lhs)/<span class="number">2</span>;</div><div class="line">    mergeSort(nums,lhs,mid);</div><div class="line">    mergeSort(nums,mid,rhs);</div><div class="line">    merge(nums,lhs,mid,rhs);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
   <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/09/database/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -518,7 +775,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-count">14</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
