@@ -84,16 +84,46 @@
 
 
 
-<meta name="description" content="Binary WatchA binary watch has 4 LEDs on the top which represent the hours (0-11), and the 6 LEDs on the bottom represent the minutes (0-59).Each LED represents a zero or one, with the least signific">
+<meta name="description" content="java 内存管理笔记　　
+Garbage Collection Concepts
+Garbage Collectors
+Ergonomics
+Recommendations
+Tools to Evaluate Garbage Collection Performance  
+
+Garbage Collection Concepts垃圾回收器职责:
+
+allocating memory
+ensur">
 <meta property="og:type" content="article">
-<meta property="og:title" content="算法－回溯法">
-<meta property="og:url" content="http://yoursite.com/2017/04/11/algo-backtracing/index.html">
+<meta property="og:title" content="memory_manager_java">
+<meta property="og:url" content="http://yoursite.com/2017/04/26/memory-manager-java/index.html">
 <meta property="og:site_name" content="qilianghong">
-<meta property="og:description" content="Binary WatchA binary watch has 4 LEDs on the top which represent the hours (0-11), and the 6 LEDs on the bottom represent the minutes (0-59).Each LED represents a zero or one, with the least signific">
-<meta property="og:updated_time" content="2017-04-19T13:28:05.605Z">
+<meta property="og:description" content="java 内存管理笔记　　
+Garbage Collection Concepts
+Garbage Collectors
+Ergonomics
+Recommendations
+Tools to Evaluate Garbage Collection Performance  
+
+Garbage Collection Concepts垃圾回收器职责:
+
+allocating memory
+ensur">
+<meta property="og:updated_time" content="2017-04-25T23:24:10.321Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="算法－回溯法">
-<meta name="twitter:description" content="Binary WatchA binary watch has 4 LEDs on the top which represent the hours (0-11), and the 6 LEDs on the bottom represent the minutes (0-59).Each LED represents a zero or one, with the least signific">
+<meta name="twitter:title" content="memory_manager_java">
+<meta name="twitter:description" content="java 内存管理笔记　　
+Garbage Collection Concepts
+Garbage Collectors
+Ergonomics
+Recommendations
+Tools to Evaluate Garbage Collection Performance  
+
+Garbage Collection Concepts垃圾回收器职责:
+
+allocating memory
+ensur">
 
 
 
@@ -121,13 +151,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/04/11/algo-backtracing/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/04/26/memory-manager-java/"/>
 
 
 
 
 
-  <title> 算法－回溯法 | qilianghong </title>
+  <title> memory_manager_java | qilianghong </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -240,7 +270,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/11/algo-backtracing/">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/26/memory-manager-java/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="andy">
@@ -264,7 +294,7 @@
             
             
               
-                算法－回溯法
+                memory_manager_java
               
             
           </h1>
@@ -279,8 +309,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-11T19:13:58+08:00">
-                2017-04-11
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-26T06:19:32+08:00">
+                2017-04-26
               </time>
             
 
@@ -315,10 +345,50 @@
       
 
       
-        <ul>
-<li>Binary Watch<br>A binary watch has 4 LEDs on the top which represent the hours (0-11), and the 6 LEDs on the bottom represent the minutes (0-59).<br>Each LED represents a zero or one, with the least significant bit on the right.<br>Given a non-negative integer n which represents the number of LEDs that are currently on, return all possible times the watch could represent.</li>
+        <h6 id="java-内存管理笔记"><a href="#java-内存管理笔记" class="headerlink" title="java 内存管理笔记　　"></a>java 内存管理笔记　　</h6><ul>
+<li>Garbage Collection Concepts</li>
+<li>Garbage Collectors</li>
+<li>Ergonomics</li>
+<li>Recommendations</li>
+<li>Tools to Evaluate Garbage Collection Performance  </li>
 </ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="comment">/**backtracing</span></div><div class="line">**/</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</div><div class="line">    List&lt;String&gt; watchs = <span class="keyword">new</span> LinkedList&lt;String&gt;();</div><div class="line">    <span class="function"><span class="keyword">public</span> List&lt;String&gt; <span class="title">readBinaryWatch</span><span class="params">(<span class="keyword">int</span> num)</span> </span>&#123;</div><div class="line">        readBinaryWatches(num,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>);</div><div class="line">        <span class="keyword">return</span> watchs;</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">readBinaryWatches</span><span class="params">(<span class="keyword">int</span> num,<span class="keyword">int</span> idx,<span class="keyword">int</span> w,<span class="keyword">int</span> count)</span></span>&#123;</div><div class="line">        <span class="keyword">if</span>(idx &gt; <span class="number">10</span>)&#123;</div><div class="line">            <span class="keyword">if</span>(count == num)&#123;</div><div class="line">                <span class="keyword">int</span> hours = w &gt;&gt;<span class="number">6</span>;</div><div class="line">                <span class="keyword">int</span> mints = w&amp;(<span class="number">0x3f</span>);</div><div class="line">                <span class="keyword">if</span>(hours &gt;=<span class="number">12</span> || mints &gt;=<span class="number">60</span>) <span class="keyword">return</span>;</div><div class="line">                watchs.add(hours+<span class="string">":"</span>+String.format(<span class="string">"%02d"</span>,mints));</div><div class="line">            &#125;</div><div class="line">            <span class="keyword">return</span>;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">            readBinaryWatches(num,idx+<span class="number">1</span>,w|(<span class="number">0x01</span>&lt;&lt;idx),count+<span class="number">1</span>);</div><div class="line">            readBinaryWatches(num,idx+<span class="number">1</span>,w,count);</div><div class="line"></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h6 id="Garbage-Collection-Concepts"><a href="#Garbage-Collection-Concepts" class="headerlink" title="Garbage Collection Concepts"></a>Garbage Collection Concepts</h6><p>垃圾回收器职责:</p>
+<ul>
+<li>allocating memory</li>
+<li>ensuring that the referenced objects remain in memory</li>
+<li>recovering memory used by objects that are no longer reacheable from references in executing code</li>
+</ul>
+<p>一个对象能够被引用，就认为是存活的，否则，则被认为是死的，会被当作垃圾回收。</p>
+<p>垃圾回收算法面临２个难题：</p>
+<ul>
+<li>避免内存碎片化　</li>
+<li>保持内存的申请和释放的效率　<br>设计选择：</li>
+<li>串行或者并行　</li>
+<li>并发　VS 暂停所有(stop-the-world)</li>
+<li>拷贝时是否要压缩　</li>
+</ul>
+<h5 id="性能："><a href="#性能：" class="headerlink" title="性能："></a>性能：</h5><ul>
+<li>Throughput</li>
+<li>Garbage collection overhead</li>
+<li>Ｐause time</li>
+<li>Frequency of Collection</li>
+<li>Footprint</li>
+<li>Promptness</li>
+</ul>
+<h5 id="Generational-Collection-分代收集"><a href="#Generational-Collection-分代收集" class="headerlink" title="Generational Collection -分代收集　"></a>Generational Collection -分代收集　</h5><p>１. Yong generation</p>
+<blockquote>
+<p>　年轻代更注重与效率</p>
+</blockquote>
+<p>２. Old Generation</p>
+<blockquote>
+<p>老年代更注重与内存效率　</p>
+</blockquote>
+<h5 id="HotSpot-垃圾收集器"><a href="#HotSpot-垃圾收集器" class="headerlink" title="HotSpot 垃圾收集器　"></a>HotSpot 垃圾收集器　</h5><p>１. Generations</p>
+<ol>
+<li>yong</li>
+<li>old</li>
+<li>permanent<br>大多数对象在年轻代中初始化生成。　当对象在年轻代中经过一定次数的收集后仍然存活，则会被转入老年代，一些比较大的对象会直接在老年代中存活；classes ,methods 会存活在永久代中。</li>
+</ol>
 
       
     </div>
@@ -345,8 +415,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/03/28/algo-dp/" rel="next" title="算法－动态规划">
-                <i class="fa fa-chevron-left"></i> 算法－动态规划
+              <a href="/2017/04/24/zookeeper/" rel="next" title="zookeeper">
+                <i class="fa fa-chevron-left"></i> zookeeper
               </a>
             
           </div>
@@ -354,10 +424,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/04/19/netty/" rel="prev" title="netty学习笔记">
-                netty学习笔记 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -404,8 +470,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -454,6 +529,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-6"><a class="nav-link" href="#java-内存管理笔记"><span class="nav-number">1.</span> <span class="nav-text">java 内存管理笔记　　</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Garbage-Collection-Concepts"><span class="nav-number">2.</span> <span class="nav-text">Garbage Collection Concepts</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#性能："><span class="nav-number"></span> <span class="nav-text">性能：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Generational-Collection-分代收集"><span class="nav-number"></span> <span class="nav-text">Generational Collection -分代收集　</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#HotSpot-垃圾收集器"><span class="nav-number"></span> <span class="nav-text">HotSpot 垃圾收集器　</span></a></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
     </div>
